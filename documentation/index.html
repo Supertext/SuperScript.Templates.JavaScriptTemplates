@@ -72,9 +72,7 @@
 			&lt;section name="superScript" type="SuperScript.Configuration.SuperScriptConfig, SuperScript.Common" /&gt;
 		&lt;/configSections&gt;
 	&lt;/configuration&gt;
-	&#10;
 	&hellip;
-	&#10;
 	&lt;superScript&gt;
 		&lt;emitter key="templates"&gt;
 			&lt;converters&gt;
@@ -89,6 +87,24 @@
 			&lt;/writers&gt;
 		&lt;/emitter&gt;
 	&lt;/superScript&gt;
+</pre>
+
+<p>
+	The same emitter can also be constructed programmatically.
+</p>
+
+<pre class="brush: c#">
+	using SuperScript.Configuration;
+	&hellip;
+	Settings.Instance.Emitters.Add(new StandardEmitter
+                                         {
+                                             Converter = new SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify
+                                                             {
+                                                                 PreCompile = true
+                                                             },
+                                             Key = "templates",
+                                             HtmlWriter = new SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript()
+                                         });
 </pre>
 
 <p>
