@@ -71,22 +71,22 @@
 		&lt;configSections&gt;
 			&lt;section name="superScript" type="SuperScript.Configuration.SuperScriptConfig, SuperScript.Common" /&gt;
 		&lt;/configSections&gt;
+		&hellip;
+		&lt;superScript&gt;
+			&lt;emitter key="templates"&gt;
+				&lt;converters&gt;
+					&lt;modifier type="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify, SuperScript.Templates.JavaScriptTemplates"&gt;
+						&lt;properties&gt;
+							&lt;property name="PreCompile" value="true" type="System.Boolean, mscorlib" /&gt;
+						&lt;/properties&gt;
+					&lt;/modifier&gt;
+				&lt;/converters&gt;
+				&lt;writers&gt;
+					&lt;modifier type="SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript, SuperScript.Templates" /&gt;
+				&lt;/writers&gt;
+			&lt;/emitter&gt;
+		&lt;/superScript&gt;
 	&lt;/configuration&gt;
-	&hellip;
-	&lt;superScript&gt;
-		&lt;emitter key="templates"&gt;
-			&lt;converters&gt;
-				&lt;modifier type="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify, SuperScript.Templates.JavaScriptTemplates"&gt;
-					&lt;properties&gt;
-						&lt;property name="PreCompile" value="true" type="System.Boolean, mscorlib" /&gt;
-					&lt;/properties&gt;
-				&lt;/modifier&gt;
-			&lt;/converters&gt;
-			&lt;writers&gt;
-				&lt;modifier type="SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript, SuperScript.Templates" /&gt;
-			&lt;/writers&gt;
-		&lt;/emitter&gt;
-	&lt;/superScript&gt;
 </pre>
 
 <p>
