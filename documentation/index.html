@@ -28,17 +28,30 @@
 </p>
 
 <ul class="list-unstyled class-hierarchy">
-  <li><abbr title="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify"><code>JavaScriptTemplatesStringify</code></abbr></li>
-  <li>&#8595;</li>
-  <li><a href="http://supertext.github.io/SuperScript.Templates/#!/modifiers.converters.template-stringify" target="_blank"><abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>SuperScript.Templates.Modifiers.Converters.TemplateStringify</code></abbr></a></li>
-  <li>&#8595;</li>
-  <li><a href="http://supertext.github.io/SuperScript.Common/#!/modifiers.collection-converter" target="_blank"><abbr title="SuperScript.Modifiers.Converters.CollectionConverter"><code>SuperScript.Modifiers.Converters.CollectionConverter</code></abbr></a></li>
-  <li>&#8595;</li>
-  <li><a href="https://github.com/Supertext/SuperScript.Common/blob/master/Modifiers/BaseClass/Modifier.cs" target="_blank"><abbr title="SuperScript.Modifiers.ModifierBase"><code>SuperScript.Modifiers.ModifierBase</code></abbr></li>
+	<li><abbr title="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify"><code>JavaScriptTemplatesStringify</code></abbr></li>
+	<li>&#8595;</li>
+	<li><a href="http://supertext.github.io/SuperScript.Templates/#!/modifiers.converters.template-stringify" target="_blank"><abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>SuperScript.Templates.Modifiers.Converters.TemplateStringify</code></abbr></a></li>
+	<li>&#8595;</li>
+	<li><a href="http://supertext.github.io/SuperScript.Common/#!/modifiers.collection-converter" target="_blank"><abbr title="SuperScript.Modifiers.Converters.CollectionConverter"><code>SuperScript.Modifiers.Converters.CollectionConverter</code></abbr></a></li>
+	<li>&#8595;</li>
+	<li><a href="https://github.com/Supertext/SuperScript.Common/blob/master/Modifiers/BaseClass/Modifier.cs" target="_blank"><abbr title="SuperScript.Modifiers.ModifierBase"><code>SuperScript.Modifiers.ModifierBase</code></abbr></a></li>
 </ul>
 
 <p>
-  
+	The reason that the implementations of <abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>TemplateStringify</code></abbr>
+	differ is because of the <abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify.PreCompile"><code>PreCompile</code></abbr> option. 
+	Naturally, the compilation action for each type of HTML client library differs (otherwise they would all be the same library).
+</p>
+
+<p>
+	Therefore, the only real difference between implementations of <abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>TemplateStringify</code></abbr>
+	lies in the implementations of <abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify.CollateTemplates"><code>CollateTemplates</code></abbr> method.
+</p>
+
+<p>
+	Consequently, this implementation offers the ability to pre-compile <a href="https://github.com/blueimp/JavaScript-Templates" target="_blank">JavaScript Templates</a> HTML templates 
+	whereas other implementations of <abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>TemplateStringify</code></abbr> will
+	offer compilation into different client-side template library formats.
 </p>
 
 <h3>Example</h3>
