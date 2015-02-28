@@ -1,0 +1,48 @@
+<h2>What Does It Do?</h2>
+
+<p>
+	This library is an add-on for <a href="https://github.com/Supertext/SuperScript.Common/" target="_blank">SuperScript</a>. It is strongly recommended
+	to read the <a href="http://supertext.github.io/SuperScript.Common/" target="_blank">documentation</a> for the core project before proceeding with this 
+	library. If you haven't yet read the core documentation then it is recommended that you start by reading about the 
+	<a href="http://supertext.github.io/SuperScript.Common/#!/core-concepts" target="_blank">core concepts</a>.
+</p>
+
+<p>
+	SuperScript.Templates.JavaScriptTemplates adds functionality for declaring HTML templates, written for the <a href="https://github.com/blueimp/JavaScript-Templates" target="_blank">JavaScript Templates</a> library in server-side .NET code.
+</p>
+
+<p>
+	While the <a href="https://github.com/Supertext/SuperScript.Common" target="_blank">SuperScript</a> library contains the core functionality for
+	making and emitting declarations, SuperScript.Templates.JavaScriptTemplates contains a specific implementation of one of those core classes. Broadly speaking,
+	SuperScript has three main aspects: <a href="http://supertext.github.io/SuperScript.Common/#!/declarations.declarations" target="_blank">declarations</a>, 
+	which are instances of <abbr title="SuperScript.Declarables.DeclarationBase"><code>DeclarationBase</code></abbr>, and 
+	<a href="http://supertext.github.io/SuperScript.Common/#!/emitters.emitters" target="_blank">emitters</a>, which consist of a combination of 
+	<a href="http://supertext.github.io/SuperScript.Common/#!/modifiers.modifiers" target="_blank">modifiers</a>.
+</p>
+
+<p>
+	SuperScript.Templates.JavaScriptTemplates therefore consists an implementation of a specific modifier, an 
+	<abbr title="SuperScript.Modifiers.Converters.CollectionConverter"><code>CollectionConverter</code></abbr>. In fact, this
+	implementation, <abbr title="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify"><code>JavaScriptTemplatesStringify</code></abbr>, 
+	is part of a hierarchical chain:
+</p>
+
+<ul>
+  <li><abbr title="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify"><code>JavaScriptTemplatesStringify</code></abbr></li>
+  <li>&#8595;</li>
+  <li><a href="http://supertext.github.io/SuperScript.Templates/#!/modifiers.converters.template-stringify" target="_blank"><abbr title="SuperScript.Templates.Modifiers.Converters.TemplateStringify"><code>TemplateStringify</code></abbr></a></li>
+  <li>&#8595;</li>
+  <li><a href="http://supertext.github.io/SuperScript.Common/#!/modifiers.collection-converter" target="_blank"><abbr title="SuperScript.Modifiers.Converters.CollectionConverter"><code>CollectionConverter</code></abbr></a></li>
+  <li>&#8595;</li>
+  <li><a href="https://github.com/Supertext/SuperScript.Common/blob/master/Modifiers/BaseClass/Modifier.cs" target="_blank"><abbr title="SuperScript.Modifiers.ModifierBase"><code>ModifierBase</code</abbr></li>
+</ul>
+
+<p>
+  
+</p>
+
+<h3>Example</h3>
+
+<p>
+  
+</p>
