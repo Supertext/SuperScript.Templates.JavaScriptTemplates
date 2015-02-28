@@ -57,5 +57,47 @@
 <h3>Example</h3>
 
 <p>
-  
+	Here is an example of declaratively configuring an <abbr title="SuperScript.Emitters.IEmitter"><code>IEmitter</code></abbr> in a config file. This
+	emitter implements this <abbr title="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify"><code>JavaScriptTemplatesStringify</code></abbr> class
+	and uses <abbr title="SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript"><code>TemplateStringifyJavaScript</code></abbr> to write out the contents.
+</p>
+
+<p>
+	This example also shows how to enable pre-compilation.
+</p>
+
+<pre class="brush: xml">
+	&lt;configuration&gt;
+		&lt;configSections&gt;
+			&lt;section name="superScript" type="SuperScript.Configuration.SuperScriptConfig, SuperScript.Common" /&gt;
+		&lt;/configSections&gt;
+	&lt;/configuration&gt;
+	&#10;
+	&hellip;
+	&#10;
+	&lt;superScript&gt;
+		&lt;emitter key="templates"&gt;
+			&lt;converters&gt;
+				&lt;modifier type="SuperScript.Templates.JavaScriptTemplates.Modifiers.Converters.JavaScriptTemplatesStringify, SuperScript.Templates.JavaScriptTemplates"&gt;
+					&lt;properties&gt;
+						&lt;property name="PreCompile" value="true" type="System.Boolean, mscorlib" /&gt;
+					&lt;/properties&gt;
+				&lt;/modifier&gt;
+			&lt;/converters&gt;
+			&lt;writers&gt;
+				&lt;modifier type="SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript, SuperScript.Templates" /&gt;
+			&lt;/writers&gt;
+		&lt;/emitter&gt;
+	&lt;/superScript&gt;
+</pre>
+
+<p>
+	More details on configuring an <abbr title="SuperScript.Emitters.IEmitter"><code>IEmitter</code></abbr> can be
+	read <a href="http://supertext.github.io/SuperScript.Common/#!/emitters.create-emitter" target="_blank">here</a>.
+</p>
+
+<p>
+	Also, more details on the <abbr title="SuperScript.Templates.Modifiers.Writers.TemplateStringifyJavaScript"><code>TemplateStringifyJavaScript</code></abbr>
+	implementation of <abbr title="SuperScript.Modifiers.Writers.HtmlWriter"><code>HtmlWriter</code></abbr> can be read
+	<a href="http://supertext.github.io/SuperScript.Templates/#!/modifiers.writers.template-stringify-javascript" target="_blank">here</a>.
 </p>
